@@ -2333,7 +2333,7 @@ section{
 =============================================*/
 
 .bg-sponsors-section{
-	background: #f7f7f7;
+	background: #F7F1E5 !important;
 	padding-bottom: 120px;
 }
 .sponsors-option{}
@@ -2771,7 +2771,7 @@ section{
 ==========================================*/
 
 .bg-recent-project{
-	background: #f7f7f7;
+	background: #F7F1E5;
 	padding: 0 0 94px 0;
 }
 .recent-project .section-header{
@@ -3030,7 +3030,7 @@ div#filters {
 ==========================================*/
 
 .bg-focus-cause-section2 {
-	background: #f7f7f7;
+	background: #F7F1E5;
     padding-bottom: 100px;
 }
 
@@ -3045,7 +3045,7 @@ div#filters {
 ==========================================*/
 
 .bg-compaian-video{
-	background: url(../images/home02/bg-video-section.jpg) no-repeat fixed;
+	background: url(../images/imagesme/tamara-bellis-rWrBskhjlg4-unsplash.jpg) no-repeat fixed;
     background-size: cover;
     background-position: 48% 100%;
 }
@@ -3073,7 +3073,7 @@ div#filters {
 
 
 .bg-collection-section{
-	background: #f7f7f7;
+	background: #F7F1E5;
 	padding-bottom: 86px;
 }
 
