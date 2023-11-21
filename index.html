@@ -83,7 +83,7 @@
     />
   </head>
 
-  <body>
+  <body onload="showalert()">
     <div class="box-style">
       <div class="color-btn">
         <a href="#"><i class="fa fa-cog fa-spin" aria-hidden="true"></i></a>
@@ -695,52 +695,9 @@
             <div class="row">
               <div class="count-option">
                 <div class="row">
-                  <div class="col-lg-3 col-sm-6 col-12">
-                    <div class="count-items">
-                      <i class="flaticon-internet"></i>
-                      <span
-                        class="counter"
-                        data-to="25"
-                        data-speed="1500"
-                      ></span
-                      ><span>+</span>
-                      <h4>SMALL BUSINESS</h4>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6 col-12">
-                    <div class="count-items">
-                      <i class="flaticon-man"></i>
-                      <span
-                        class="counter"
-                        data-to="20"
-                        data-speed="1500"
-                      ></span
-                      ><span>+</span>
-                      <h4>EMPLOYER</h4>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6 col-12">
-                    <div class="count-items">
-                      <i class="flaticon-rocket-launch"></i>
-                      <span
-                        class="counter"
-                        data-to="50"
-                        data-speed="1500"
-                      ></span>
-                      <h4>SUCCESS MISSION</h4>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6 col-12">
-                    <div class="count-items">
-                      <i class="flaticon-people"></i>
-                      <span
-                        class="counter"
-                        data-to="100"
-                        data-speed="1500"
-                      ></span>
-                      <h4>EXPERT WRITERS</h4>
-                    </div>
-                  </div>
+                  
+                      <h3 class="mission">Our mission is to champion environmental sustainability while fostering the 
+                        growth of small businesses dedicated to producing eco-friendly bags.</h3>
                 </div>
               </div>
             </div>
@@ -1828,7 +1785,7 @@
                             class="form-control"
                             id="nameId"
                             name="name"
-                            placeholder="Full Name"
+                            placeholder="Full Name" required
                           />
                         </div>
                         <!-- .form-group -->
@@ -1841,7 +1798,7 @@
                             class="form-control"
                             id="emailId"
                             name="email"
-                            placeholder="Email Address"
+                            placeholder="Email Address" required
                           />
                         </div>
                       </div>
@@ -1858,11 +1815,12 @@
                       />
                     </div>
                     <textarea
+                    id="messageId"
                       class="form-control text-area"
                       rows="3"
-                      placeholder="Message"
+                      placeholder="Message" required
                     ></textarea>
-                    <button type="submit" class="btn btn-default">
+                    <button type="submit" class="btn btn-default" onclick="validationform()">
                       Send Email
                     </button>
                   </form>
@@ -2192,6 +2150,7 @@
       <!-- End Scrolling -->
     </div>
 
+    <script src="assets/js/javascript.js"></script>
     <script type="text/javascript" src="assets/js/jquery-2.2.3.min.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
     <script

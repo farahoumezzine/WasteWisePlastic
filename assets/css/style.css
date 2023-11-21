@@ -904,6 +904,21 @@ section{
 	color: #fff;
 }
 
+.mission{
+	background-image:url(../images/imagesme/yue-iris-TYvgqvcnpRs-unsplash.jpg);
+	background-size: cover;
+	font-size: 40px;
+	line-height: 2em;
+	color: transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
+}
+/*
+.bg-count2-section{
+	/*background: url(../images/imagesme/priscilla-du-preez-ZkfWNqu3m04-unsplash.jpg) no-repeat fixed;
+    background-size: cover;
+    background-position: 48% 100%;*/
+/*}
 /*======Menu top Fixed ======*/
 
 .menu-scroll.menu-transparent{
@@ -2950,11 +2965,7 @@ div#filters {
 	Start Counter2 Section 
 ==========================================*/
 
-.bg-count2-section{
-	background: url(../images/imagesme/priscilla-du-preez-ZkfWNqu3m04-unsplash.jpg) no-repeat fixed;
-    background-size: cover;
-    background-position: 48% 100%;
-}
+
 
 
 
