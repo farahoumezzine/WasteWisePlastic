@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>register</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="../WasteWisePlastic/assets/css/styles2.css">
+
+	</head>
+	<body >
+		
+		<div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Registration Form</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-5">
+					<div class="register-wrap p-4 p-md-5">
+		      	<div class="icon d-flex align-items-center justify-content-center">
+		      		<span class="fa fa-user-o"></span>
+		      	</div>
+		      	<!--<h3 class="text-center mb-4">Have an account?</h3>-->
+						<form method="POST" action="#" class="login-form" onsubmit="return Checkformulaire()">
+		      		<div class="form-group">
+		      			<input type="text" id="fullnameID" class="form-control rounded-left" 
+						placeholder="Full Name" minlength="3" maxlength="20" required oninput="checklengthpass()">
+						<h6 style="color: #CE5A67;" id="passwordloc" class="invalid" ></h6>
+
+		      		</div>
+                      <div class="form-group">
+                        <input type="text"  id="usernameID" class="form-control rounded-left" 
+						placeholder="User Name"   required oninput="checklengthpass2()">
+						<h6 style="color: #CE5A67;" id="passwordloc2" class="invalid"></h6>
+
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="emailId" class="form-control rounded-left" 
+						placeholder="email address" onclick="ValidateEmail()" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control rounded-left" 
+						placeholder="Phone number" required>
+                    </div>
+
+                    <div class="form-group"> 
+                        <label>What is your gender? </label> <br>
+                        <input  type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="female"> Female 
+                    </div>
+                    
+
+				
+                   
+	            <div class="form-group d-flex">
+	              <input type="password" id="pass1" class="form-control rounded-left" placeholder="Password" required oninput="checklengthpass()"
+				  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+				  title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"> 
+				
+	            </div>
+                <div class="form-group d-flex">
+                    <input type="password" id="pass2" class="form-control rounded-left" placeholder="Confirm Password" required>
+                  </div>
+	            <div class="form-group d-md-flex">
+	            	<div class="w-50">
+	
+								</div>
+								<div class="w-50 text-md-right">
+									<a href="login.html">Have an account ?LOGIN</a>
+								</div>
+								
+	            </div>
+				<div id="message">
+					<h3>Password must contain the following:</h3>
+					<p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+					<p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+					<p id="number" class="invalid">A <b>number</b></p>
+					<p id="length" class="invalid">Minimum <b>8 characters</b></p>
+				  </div>
+	            <div class="form-group">
+	            	<button type="submit" class="btn btn-primary rounded submit p-3 px-5">
+						Get Started</button>
+						
+	            </div>
+				
+
+
+	          </form>
+	        </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <script src="assets/js/javascript2.js"></script>
+
+	<script src="assets/js/jquery-2.2.3.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <!--<script src="./assets/js/popper.js"></script>-->
+
+  
+  <script>
+	var password1 = document.getElementById("pass1");
+
+//  show the message box
+password1.onfocus = function () {
+  document.getElementById("message").style.display = "block";
+};
+
+// hide the message box
+password1.onblur = function () {
+  document.getElementById("message").style.display = "none";
+};
+
+
+  </script>
+  </div >
+	</body>
+</html>
+
