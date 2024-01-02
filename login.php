@@ -1,3 +1,41 @@
+
+<?php
+   session_start();
+   require './Database.php';
+
+$db = new Database();
+$conn = $db->getConnection();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+	if (isset($_POST['userName']) && isset($_POST['password']) && !empty($_POST['userName']) && !empty($_POST['password'])) {
+		// Échapper les valeurs pour éviter les attaques par injection SQL (utilisez des requêtes préparées pour une sécurité accrue)
+		$userName = mysqli_real_escape_string($conn, $_POST['userName']);
+		$password = mysqli_real_escape_string($conn, $_POST['password']);
+
+		// Requête SQL pour vérifier les informations de connexion
+		$sql = "SELECT * FROM users WHERE userName = '$userName' AND password = '$password'";
+		
+		// Exécutez la requête SQL
+		$result = mysqli_query($conn, $sql);
+
+		// Vérifiez s'il y a des résultats
+		if ($result && mysqli_num_rows($result) > 0) {
+			// Utilisateur authentifié avec succès
+			$_SESSION['user'] = $userName; // Enregistrez l'utilisateur dans la session
+			echo ("work"); // Redirigez vers une page de bienvenue ou un tableau de bord
+			exit();
+		} else {
+			// Échec de l'authentification
+			echo "Invalid username or password";
+		}
+	} else {
+		// Les champs ne sont pas définis ou vides
+		echo "Please enter both username and password";
+	}
+}
+$db->closeConnection(); 
+ 
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -41,8 +79,10 @@
 		      	<div class="icon d-flex align-items-center justify-content-center">
 		      		<span class="fa fa-user-o"></span>
 		      	</div>
+
+				 
 		      	<!--<h3 class="text-center mb-4">Have an account?</h3>-->
-						<form method="POST" action="index.html" class="login-form" onsubmit="return Checkformulaire()">
+						<form method="POST" action="login.php"  class="login-form" onsubmit="return Checkformulaire()">
 		      		
                       <div class="form-group">
                         <input type="text"  name="userName" id="usernameID" class="form-control rounded-left" 
@@ -96,7 +136,6 @@
 			</div>
 		</div>
 	</section>
-
     <script src="assets/js/javascript2.js"></script>
 
 	<script src="assets/js/jquery-2.2.3.min.js"></script>
@@ -124,3 +163,4 @@ password1.onblur = function () {
 	</body>
 </html>
 
+ 
