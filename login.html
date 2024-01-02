@@ -45,7 +45,7 @@
 						<form method="POST" action="index.html" class="login-form" onsubmit="return Checkformulaire()">
 		      		
                       <div class="form-group">
-                        <input type="text"  id="usernameID" class="form-control rounded-left" 
+                        <input type="text"  name="userName" id="usernameID" class="form-control rounded-left" 
 						placeholder="User Name"   required oninput="checklengthpass2()">
 						<h6 style="color: #CE5A67;" id="passwordloc2" class="invalid"></h6>
 
@@ -58,7 +58,7 @@
 				
                    
 	            <div class="form-group d-flex">
-	              <input type="password" id="pass1" class="form-control rounded-left" placeholder="Password" required oninput="checklengthpass()"
+	              <input type="password" name="password" id="pass1" class="form-control rounded-left" placeholder="Password" required oninput="checklengthpass()"
 				  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
 				  title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"> 
 				
